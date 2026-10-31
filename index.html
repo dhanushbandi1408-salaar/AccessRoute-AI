@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccessRoute AI | Accessible Navigation</title>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">♿ AccessRoute <span>AI</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#planner">Plan Route</a>
+            <a href="#features">Features</a>
+            <a href="#report">Report Barrier</a>
+        </nav>
+
+        <button class="nav-btn" onclick="document.getElementById('planner').scrollIntoView({behavior:'smooth'})">
+            Get Started
+        </button>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <span class="tag">SMART ACCESSIBLE NAVIGATION</span>
+
+                <h1>Every Journey Deserves an <span>Accessible Route.</span></h1>
+
+                <p>
+                    Discover safer and smarter routes designed for everyone.
+                    Avoid barriers, flooding, construction and inaccessible paths.
+                </p>
+
+                <button class="primary-btn"
+                    onclick="document.getElementById('planner').scrollIntoView({behavior:'smooth'})">
+                    Plan Your Journey →
+                </button>
+
+                <div class="hero-stats">
+                    <div><strong>Smart</strong><small>Route Planning</small></div>
+                    <div><strong>Live-ready</strong><small>Disruption Alerts</small></div>
+                    <div><strong>Inclusive</strong><small>Navigation</small></div>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="card-icon">♿</div>
+                <h3>Travel Without Barriers</h3>
+                <p>Accessibility comes first. Every journey matters.</p>
+                <div class="route-line">
+                    <span>●</span> Your Location
+                </div>
+                <div class="route-line">
+                    <span>●</span> Accessible Path
+                </div>
+                <div class="route-line">
+                    <span>●</span> Your Destination
+                </div>
+            </div>
+
+        </section>
+
+        <section class="planner-section" id="planner">
+
+            <div class="section-heading">
+                <span class="tag">YOUR JOURNEY STARTS HERE</span>
+                <h2>Plan Your Accessible Route</h2>
+                <p>Enter your locations and select your accessibility needs.</p>
+            </div>
+
+            <div class="planner-card">
+
+                <div class="input-group">
+                    <label for="start">Starting Location</label>
+                    <input id="start" type="text"
+                        placeholder="Enter your starting location">
+                </div>
+
+                <div class="input-group">
+                    <label for="destination">Destination</label>
+                    <input id="destination" type="text"
+                        placeholder="Enter your destination">
+                </div>
+
+                <h3>Accessibility Preferences</h3>
+
+                <div class="preferences">
+                    <label><input type="checkbox" value="wheelchair"> ♿ Wheelchair friendly</label>
+                    <label><input type="checkbox" value="stairs"> Avoid stairs</label>
+                    <label><input type="checkbox" value="flood"> Avoid flooded roads</label>
+                    <label><input type="checkbox" value="construction"> Avoid construction</label>
+                    <label><input type="checkbox" value="senior"> Senior citizen friendly</label>
+                </div>
+
+                <button class="primary-btn full-btn" onclick="findRoute()">
+                    Find Accessible Route →
+                </button>
+
+                <div id="route-result" aria-live="polite"></div>
+
+            </div>
+        </section>
+
+        <section class="features-section" id="features">
+            <div class="section-heading">
+                <span class="tag">OUR TECHNOLOGY</span>
+                <h2>Navigation That Understands Your Needs</h2>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div>♿</div>
+                    <h3>Accessibility First</h3>
+                    <p>Prioritize wheelchair-friendly paths and stair-free routes.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div>🌊</div>
+                    <h3>Flood Detection</h3>
+                    <p>Identify reported flooded areas and avoid affected roads.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div>🚧</div>
+                    <h3>Disruption Alerts</h3>
+                    <p>Identify construction, blocked paths and broken lifts.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div>📍</div>
+                    <h3>Community Reports</h3>
+                    <p>Allow people to share accessibility barriers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="report-section" id="report">
+            <div class="section-heading">
+                <span class="tag">HELP THE COMMUNITY</span>
+                <h2>Report an Accessibility Barrier</h2>
+                <p>Share a problem to help others travel safely.</p>
+            </div>
+
+            <div class="planner-card">
+                <div class="input-group">
+                    <label for="barrier-type">Barrier Type</label>
+                    <select id="barrier-type">
+                        <option value="">Select barrier type</option>
+                        <option>Flooded Road</option>
+                        <option>Broken Lift</option>
+                        <option>Construction</option>
+                        <option>Blocked Footpath</option>
+                        <option>Stairs / No Ramp</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="barrier-location">Barrier Location</label>
+                    <input id="barrier-location" type="text"
+                        placeholder="Enter barrier location">
+                </div>
+
+                <div class="input-group">
+                    <label for="barrier-description">Description</label>
+                    <textarea id="barrier-description"
+                        placeholder="Describe the problem..."></textarea>
+                </div>
+
+                <button class="primary-btn full-btn" onclick="reportBarrier()">
+                    Submit Barrier Report
+                </button>
+
+                <div id="report-result" aria-live="polite"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>♿ AccessRoute AI</h3>
+        <p>Making every journey accessible, safer and smarter.</p>
+        <small>Accessibility for everyone | 2026</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

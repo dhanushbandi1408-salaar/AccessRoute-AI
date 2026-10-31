@@ -1,0 +1,22 @@
+[
+  {
+    "type": "Flooded Road",
+    "location": "Benz Circle, Vijayawada",
+    "description": "Footpath blocked by construction materials, making it difficult for wheelchair users to pass.",
+    "coordinates": [
+      80.6526978,
+      16.4984418
+    ],
+    "status": "Unverified community report"
+  },
+  {
+    "type": "Flooded Road",
+    "location": "Benz circle,Vijayawada",
+    "description": "Footpath blocked by construction materials, making it difficult for wheelchair users to pass.",
+    "coordinates": [
+      80.6526978,
+      16.4984418
+    ],
+    "status": "Unverified community report"
+  }
+]
