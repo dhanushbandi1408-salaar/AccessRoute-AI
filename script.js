@@ -4,7 +4,7 @@
 // ==========================================
 
 // Backend address for testing on this computer
-const BACKEND_URL = "http://127.0.0.1:5000";
+const BACKEND_URL = "https://accessroute-ai-o932.onrender.com";
 
 let accessRouteMap = null;
 let leafletLoading = null;
